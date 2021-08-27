@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@500&family=Sansita+Swashed:wght@600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Baloo Bhai 2', cursive;
+        }
+
+        /* Section Code */
+        section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(-30deg, #03a9f4 0%, #3a78b7 50%,
+                    #262626 50%, #607d8b 100%);
+            filter: hue-rotate(120deg);
+            animation: animate 10s linear infinite;
+        }
+
+        /* Animation */
+        @keyframes animate {
+            0% {
+                filter: hue-rotate(0deg);
+            }
+
+            100% {
+                filter: hue-rotate(360deg);
+            }
+        }
+
+        /* Box Code */
+        .box {
+            position: relative;
+            padding: 50px;
+            width: 360px;
+            height: 480px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 6px;
+            box-shadow: 0 5px 35px rgba(0, 0, 0, 0.2);
+        }
+
+        .box:after {
+            content: '';
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            right: 5px;
+            bottom: 5px;
+            border-radius: 5px;
+            pointer-events: none;
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 0.3) 0%,
+                    rgba(255, 255, 255, 0.1) 15%, transparent 50%, transparent 85%,
+                    rgba(255, 255, 255, 0.3) 100%);
+        }
+
+        .box form {
+            position: relative;
+            width: 100%;
+        }
+
+        .box .form h2 {
+            color: #fff;
+            font-weight: 600;
+            letter-spacing: 2px;
+            margin-bottom: 30px;
+        }
+
+        /* Input Text Box Code */
+        .box form .inputBx {
+            position: relative;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .box form .inputBx input {
+            width: 100%;
+            outline: none;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: transparent;
+            padding: 8px 10px;
+            padding-left: 35px;
+            border-radius: 6px;
+            color: #fff;
+            font-size: 16px;
+            font-weight: 300;
+            box-shadow: inset 0 0 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .box form .inputBx input::placeholder {
+            color: #fff;
+        }
+
+        /* Button Code */
+        .box form .inputBx input[type="submit"] {
+            background: #fff;
+            color: #111;
+            max-width: 100px;
+            padding: 8px 10px;
+            box-shadow: none;
+            font-weight: 500;
+            letter-spacing: 1px;
+            cursor: pointer;
+        }
+
+        /* Input Image Code */
+        .box form .inputBx i {
+            position: absolute;
+            top: 12px;
+            left: 15px;
+            transform: scale(0.7);
+            filter: invert(1);
+        }
+
+        /* Remember CheckBox Code */
+        .remeber {
+            position: relative;
+            display: inline-block;
+            color: #fff;
+            font-weight: 300;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+
+        /* Box Form Code */
+        .box .form p {
+            color: #fff;
+            font-weight: 300;
+            font-size: 15px;
+            margin-top: 5px;
+        }
+
+        .box .form a {
+            color: #fff;
+        }
+    </style>
+    <title>Animated Login Form</title>
+</head>
+
+<body>
+    <section>
+        <div class="box">
+            <div class="form">
+                <h2>Login</h2>
+                <form>
+                    <div class="inputBx">
+                        <input type="text" placeholder="User Name">
+                        <i class="fa fa-user"></i>
+                    </div>
+                    <div class="inputBx">
+                        <input type="password" placeholder="Password">
+                        <i class="fa fa-lock"></i>
+                    </div>
+                    <label class="remeber"><input type="checkbox">Remember Me</label>
+                    <div class="inputBx">
+                        <input type="submit" value="Login">
+                    </div>
+                </form>
+                <p>Forgot <a href="#">Password</a></p>
+                <p>Need an <a href="#">Account</a></p>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
